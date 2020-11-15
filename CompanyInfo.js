@@ -21,11 +21,9 @@ class CompanyInfo{
                 this.companyContainer.appendChild(this.createDescription(data));
                 this.stopSpinner();
             }else{
-                alert("HTTP-Error: " + "Please check if api key reached limit of requests");
                 this.stopSpinner();
             }
         }catch{
-            alert("HTTP-Error: " + "Please check if api key reached limit of requests");
             this.stopSpinner();
         }
     }
