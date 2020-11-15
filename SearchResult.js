@@ -30,7 +30,7 @@ class SearchResult{
         img.setAttribute("id", "company-image-main");
         li.appendChild(img);
         let a = document.createElement("a");
-        a.href = '/JS-Project-2-ITC/company.html?symbol=' + elem.symbol;
+        a.href = '/company.html?symbol=' + elem.symbol;
         a.classList.add("list-link");
         a.innerHTML = companyName + ". "+'<span class="symbol-text">'+"("+symbol+")"+ changeElement + '</span>';
         li.appendChild(a);

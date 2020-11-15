@@ -56,7 +56,7 @@ class CompareCompanies{
 
     handleCompareButtonClick(){
         this.compareText.addEventListener('click',(event)=>{
-            let url = window.location.origin + "/JS-Project-2-ITC/company.html?symbol=";
+            let url = window.location.origin + "/company.html?symbol=";
             if(this.companies.length>0){
                 for(let i=0;i<this.companies.length;i++){
                     if(i===this.companies.length-1){
