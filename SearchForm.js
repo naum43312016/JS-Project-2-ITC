@@ -64,11 +64,8 @@ class SearchForm{
                     ).then(json => {
                         this.resultCallback(json,inputValue);
                     })
-                }else{
-                    alert("HTTP-Error: " + response.status);
                 }
             }catch{
-                alert("Server Error: Please refresh your page")
                 this.stopSpinner();
             }
         }
@@ -89,8 +86,6 @@ class SearchForm{
         if(response.ok){
             let json = await response.json();
             return json[0];
-        }else{
-            alert("HTTP-Error: " + response.status);
         }
     }
     

@@ -9,8 +9,6 @@
             await compInfo.load();
             await compInfo.addChart();
         }
-    }else{
-        alert("You need to specify company Symbol.")
     }
 })();
 

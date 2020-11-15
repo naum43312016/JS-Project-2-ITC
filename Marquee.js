@@ -19,22 +19,16 @@ class Marquee{
 
     async load(){
         let response = await fetch("https://stock-exchange-dot-full-stack-course-services.ew.r.appspot.com/api/v3/actives");
-        try{
-            if (response.ok){
-                let array = await response.json();
-                array = array.map((elem)=>{
-                    return '<span class="company-name-marquee-text">' + elem.ticker
-                    + '<span class="company-price-marquee">' + " $" + elem.price + '</span></span> ';
-                })
-                array.forEach(elem => {
-                    this.container.innerHTML+=elem;
-                });
-                this.animateMarquee();
-            }else{
-                alert("HTTP-Error: " + response.status);
-            }
-        }catch{
-            alert("Server Error: Please refresh your page")
+        if (response.ok){
+            let array = await response.json();
+            array = array.map((elem)=>{
+                return '<span class="company-name-marquee-text">' + elem.ticker
+                + '<span class="company-price-marquee">' + " $" + elem.price + '</span></span> ';
+            })
+            array.forEach(elem => {
+                this.container.innerHTML+=elem;
+            });
+            this.animateMarquee();
         }
     }
 }
